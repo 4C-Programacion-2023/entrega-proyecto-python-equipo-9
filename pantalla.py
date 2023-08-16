@@ -4,7 +4,8 @@ import sys
 pygame.init()
 
 # Ventana
-width, height = 1920, 1080
+width_main = 1820
+height_main = 980
 
 # Colores
 lila_color = (200, 160, 255)
@@ -18,7 +19,7 @@ imagen = pygame.transform.scale(imagen, (200, 200))  # Redimensionar la imagen a
 
 class Window:
     def __init__(self, title, bg_color):
-        self.window = pygame.display.set_mode((width, height))
+        self.window = pygame.display.set_mode((width_main, height_main))
         self.title = title
         pygame.display.set_caption(title)
         self.bg_color = bg_color
@@ -26,7 +27,7 @@ class Window:
     def show(self):
         self.window.fill(self.bg_color)
         pygame.display.set_caption(self.title)
-        self.window.blit(imagen, (width//2 - imagen.get_width()//2, 100))  # Mostrar la imagen en la parte superior
+        self.window.blit(imagen, (width_main//2 - imagen.get_width()//2, 100))  # Mostrar la imagen en la parte superior
         pygame.display.flip()
 
 class Button:
@@ -57,7 +58,7 @@ def show_lila_window():
                 running = False
             button_grey.handle_event(event)
         lila_window.show()
-        lila_window.window.blit(imagen, (width // 2 - imagen.get_width() // 2, 30))
+        lila_window.window.blit(imagen, (width_main // 2 - imagen.get_width() // 2, 30))
         button_grey.draw(lila_window.window)
         pygame.display.flip()
 
@@ -92,9 +93,9 @@ def show_grey_window():
 
 
 main_window = Window("Ventana de 1920x1080", (255, 255, 255))
-button_lila = Button(width//2 - 125, height//2 - 25, 100, 50, lila_color, show_lila_window)
-button_celeste = Button(width//2 + 25, height//2 - 25, 100, 50, celeste_color, show_celeste_window)
-button_exit = Button(width//2 - 50, height//2 + 75, 100, 50, (255, 0, 0), pygame.quit)
+button_lila = Button(width_main//2 - 125, height_main//2 - 25, 100, 50, lila_color, show_lila_window)
+button_celeste = Button(width_main//2 + 25, height_main//2 - 25, 100, 50, celeste_color, show_celeste_window)
+button_exit = Button(width_main//2 - 50, height_main//2 + 75, 100, 50, (255, 0, 0), pygame.quit)
 
 running = True
 main_window.show()
