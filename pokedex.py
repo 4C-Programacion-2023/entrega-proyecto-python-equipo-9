@@ -3,7 +3,6 @@ def buscar(a, b):
     while i < len(a):
         if a[i].numero == b:
             return i
-            break
         i = i + 1
     else:
         print("numero no encontrado")
@@ -70,7 +69,6 @@ pokedex_actual = [
     pokedex("Mew", tipos[13], tipos[18], 151),
 ]
 while True:
-    entry = 0
     inp = int(input("numero del pokemon: \n >>>"))
     entry = buscar(pokedex_actual, inp)
     print(f"nombre del pokemon: {pokedex_actual[entry].nombre}")
