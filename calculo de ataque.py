@@ -58,3 +58,4 @@ def efecto_de_tipo(ataque, tipo_enemigo1, tipo_enemigo2):
         if tipo_enemigo2 == y1:
             tipo = tipo / 2
     return tipo
+print(efecto_de_tipo(input("ataque"), input("tipo1"), input("tipo2")))

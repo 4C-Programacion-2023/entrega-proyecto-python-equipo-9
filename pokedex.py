@@ -1,3 +1,13 @@
+def buscar(a, b):
+    i = 0
+    while i < len(a):
+        if a[i].numero == b:
+            return i
+            break
+        i = i + 1
+    else:
+        print("numero no encontrado")
+
 class pokedex:
     def __init__(self, nombre, tipo1, tipo2, numero):
         self.nombre = nombre
@@ -56,11 +66,13 @@ pokedex_actual = [
     pokedex("Shuckle", tipos[5], tipos[8], 213),
     pokedex("Heracross", tipos[5], tipos[11], 214),
     pokedex("Tyranitar", tipos[9], tipos[17], 248),
-    pokedex("Linguini", tipos[17], tipos[4], 201),
+    pokedex("Linguini", tipos[16], tipos[4], 201),
     pokedex("Mew", tipos[13], tipos[18], 151),
 ]
 while True:
-    entry = int(input("numero del pokemon: \n >>>"))
+    entry = 0
+    inp = int(input("numero del pokemon: \n >>>"))
+    entry = buscar(pokedex_actual, inp)
     print(f"nombre del pokemon: {pokedex_actual[entry].nombre}")
     print(f"tipo: {pokedex_actual[entry].tipo1} - {pokedex_actual[entry].tipo2}")
     print(f"numero del pokemon: {pokedex_actual[entry].numero}")

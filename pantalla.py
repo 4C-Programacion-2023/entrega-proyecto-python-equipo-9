@@ -4,8 +4,8 @@ import sys
 pygame.init()
 
 # Ventana
-width_main = 1820
-height_main = 980
+width_main = 1365
+height_main = 710
 
 # Colores
 lila_color = (200, 160, 255)
