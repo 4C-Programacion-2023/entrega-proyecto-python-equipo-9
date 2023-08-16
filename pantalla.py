@@ -2,7 +2,6 @@ import pygame
 import sys
 
 pygame.init()
-
 # Ventana
 width_main = 1365
 height_main = 710
@@ -31,9 +30,9 @@ class Window:
         pygame.display.flip()
 
 class Button:
-    def __init__(self, x, y, width, height, color, callback):
+    def __init__(self, x, y, width, height, image, callback):
         self.rect = pygame.Rect(x, y, width, height)
-        self.color = color
+        self.color = image
         self.callback = callback
 
     def draw(self, window):
