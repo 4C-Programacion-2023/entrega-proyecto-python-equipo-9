@@ -17,7 +17,7 @@ imagen = pygame.image.load('gardevoir.gif')
 imagen = pygame.transform.scale(imagen, (200, 200))  # Redimensionar la imagen a 200x200 píxeles
 
 class Window:
-    def _init_(self, title, bg_color):
+    def __init__(self, title, bg_color):
         self.window = pygame.display.set_mode((width, height))
         self.title = title
         pygame.display.set_caption(title)
@@ -30,7 +30,7 @@ class Window:
         pygame.display.flip()
 
 class Button:
-    def _init_(self, x, y, width, height, color, callback):
+    def __init__(self, x, y, width, height, color, callback):
         self.rect = pygame.Rect(x, y, width, height)
         self.color = color
         self.callback = callback
