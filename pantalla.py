@@ -5,7 +5,6 @@ pygame.init()
 # Ventana
 width_main = 1365
 height_main = 710
-
 # Colores
 lila_color = (200, 160, 255)
 celeste_color = (100, 200, 255)
@@ -15,7 +14,9 @@ gris_oscuro_color = (50, 50, 50)
 
 imagen_path = "imagen.png"  # Asegúrate de tener la imagen en el mismo directorio que el script
 imagen1 = pygame.image.load('gardevoir.gif')
-imagen1 = pygame.transform.scale(imagen1, (200, 200))  # Redimensionar la imagen a 200x200 píxeles
+imagen1 = pygame.transform.scale(imagen1, (200, 200))
+imagen2 = pygame.image.load('WhatsApp Image 2023-08-23 at 12.07.33.jpeg')
+imagen2 = pygame.transform.scale(imagen2, (1365, 710))  # Redimensionar la imagen a 200x200 píxeles
 class Window:
     def __init__(self, title, bg_color):
         self.window = pygame.display.set_mode((width_main, height_main))
@@ -91,7 +92,7 @@ def show_grey_window():
     pygame.quit()
 
 
-main_window = Window("Ventana de 1920x1080", (255, 255, 255))
+main_window = Window("********POKEMON BATTLE********", (255, 255, 255))
 button_lila = Button(width_main//2 - 125, height_main//2 - 25, 100, 50, lila_color, show_lila_window)
 button_celeste = Button(width_main//2 + 25, height_main//2 - 25, 100, 50, celeste_color, show_celeste_window)
 button_exit = Button(width_main//2 - 50, height_main//2 + 75, 100, 50, (255, 0, 0), pygame.quit)
