@@ -92,7 +92,7 @@ def show_grey_window():
     pygame.quit()
 
 
-main_window = Window("********POKEMON BATTLE********", (255, 255, 255))
+main_window = Window("*-*-*-*-*-*-*-*-POKEMON BATTLE-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-POKEMON BATTLE-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-POKEMON BATTLE-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-POKEMON BATTLE-*-*-*-*-*-*-*-*", (255, 255, 255))
 button_lila = Button(width_main//2 - 125, height_main//2 - 25, 100, 50, lila_color, show_lila_window)
 button_celeste = Button(width_main//2 + 25, height_main//2 - 25, 100, 50, celeste_color, show_celeste_window)
 button_exit = Button(width_main//2 - 50, height_main//2 + 75, 100, 50, (255, 0, 0), pygame.quit)
