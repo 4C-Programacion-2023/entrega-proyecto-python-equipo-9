@@ -115,3 +115,5 @@ equipo = [
 ]
 print(equipo[0].base.gana_a_pokemon(equipo[1]))
 print(tipos[3])
+
+"comentario"
