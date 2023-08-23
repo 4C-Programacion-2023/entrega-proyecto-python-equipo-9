@@ -12,10 +12,10 @@ celeste_color = (100, 200, 255)
 gris_oscuro_color = (50, 50, 50)
 
 # imagenes
-imagen_path = "imagen.png"  # Asegúrate de tener la imagen en el mismo directorio que el script
-imagen = pygame.image.load('gardevoir.gif')
-imagen = pygame.transform.scale(imagen, (200, 200))  # Redimensionar la imagen a 200x200 píxeles
 
+imagen_path = "imagen.png"  # Asegúrate de tener la imagen en el mismo directorio que el script
+imagen1 = pygame.image.load('gardevoir.gif')
+imagen1 = pygame.transform.scale(imagen1, (200, 200))  # Redimensionar la imagen a 200x200 píxeles
 class Window:
     def __init__(self, title, bg_color):
         self.window = pygame.display.set_mode((width_main, height_main))
@@ -26,7 +26,7 @@ class Window:
     def show(self):
         self.window.fill(self.bg_color)
         pygame.display.set_caption(self.title)
-        self.window.blit(imagen, (width_main//2 - imagen.get_width()//2, 100))  # Mostrar la imagen en la parte superior
+        self.window.blit(imagen1, (width_main//2 - imagen1.get_width()//2, 100))  # Mostrar la imagen en la parte superior
         pygame.display.flip()
 
 class Button:
@@ -57,7 +57,7 @@ def show_lila_window():
                 running = False
             button_grey.handle_event(event)
         lila_window.show()
-        lila_window.window.blit(imagen, (width_main // 2 - imagen.get_width() // 2, 30))
+        lila_window.window.blit(imagen1, (width_main // 2 - imagen1.get_width() // 2, 30))
         button_grey.draw(lila_window.window)
         pygame.display.flip()
 
@@ -75,7 +75,7 @@ def show_celeste_window():
         celeste_window.show()
         button_grey.draw(celeste_window.window)
         pygame.display.flip()
-
+        imagen1.fill((0, 0, 0, 0))
     pygame.quit()
 
 def show_grey_window():
