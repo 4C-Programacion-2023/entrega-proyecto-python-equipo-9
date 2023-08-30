@@ -126,8 +126,8 @@ def show_gris_oscuro_window():
                     if event.type == pygame.QUIT:
                         running = False
                     gris_window = Window("---!ENCUENTRO SALVAJE¡---")
-                    gris_window.show(battalla)
-                    gris_window.show(pokemon_enemigo)
+                gris_window.show(battalla)
+                gris_window.show(pokemon_enemigo)
     pygame.quit()
 
 
