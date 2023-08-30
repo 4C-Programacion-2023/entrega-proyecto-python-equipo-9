@@ -1,0 +1,9 @@
+from calculo_de_ataque import *
+from battle import *
+import random
+a = int(random.randint(0, 27))
+
+b = pokedex_actual[a].nombre
+print(b)
+
+enemigo = pokemon_activo(b)
